@@ -34,12 +34,12 @@ class AskDConfig(datasets.BuilderConfig):
 class AskD(datasets.GeneratorBasedBuilder):
     """AskDocs: A medical QA dataset."""
 
-    VERSION = datasets.Version("1.0.0")
+    VERSION = datasets.Version("0.0.0")
 
     BUILDER_CONFIGS = [
         AskDConfig(
             name="default",
-            version=datasets.Version("1.0.0"),
+            version=datasets.Version("0.0.0"),
             description="Default config",
         ),
     ]
@@ -54,41 +54,46 @@ class AskD(datasets.GeneratorBasedBuilder):
                     "q_id": datasets.Value("string"),
                     "title": datasets.Value("string"),
                     "selftext": datasets.Value("string"),
-                    "category": datasets.Value("string"),
+                    "document": datasets.Value("string"),
                     "subreddit": datasets.Value("string"),
                     "answers": {
                         "a_id": datasets.features.Sequence(datasets.Value("string")),
                         "text": datasets.features.Sequence(datasets.Value("string")),
                         "score": datasets.features.Sequence(datasets.Value("int32")),
-                        "text_urls": datasets.features.Sequence(
-                            datasets.features.Sequence(datasets.Value("string"))
-                        ),
                     },
                     "title_urls": datasets.features.Sequence(datasets.Value("string")),
                     "selftext_urls": datasets.features.Sequence(
                         datasets.Value("string")
                     ),
+                    "answers_urls": datasets.features.Sequence(datasets.Value("string")),
                 }
             ),
             supervised_keys=None,
             citation=_CITATION,
         )
 
-    def _split_generators(self):
-        _URL = "https://jingshensn2.github.io/eli5c/datasets/"
-        downloaded_files = dl_manager.download_and_extract(
-            {
-                "train_pt": _URL + "AskDocs-train_pt.json.gz",
-                "validation_pt": _URL + "AskDocs-validation_pt.json.gz",
-                "test_pt": _URL + "AskDocs-test_pt.json.gz",
-                "train_en": _URL + "AskDocs-train_en.json.gz",
-                "validation_en": _URL + "AskDocs-validation_en.json.gz",
-                "test_en": _URL + "AskDocs-test_en.json.gz",
-            }
-        )
+    def _split_generators(self, dl_manager):
+        _URL = "https://github.com/ju-resplande/askD/releases/download/v0.0.0/"
+        _SPLITS = [
+            "train", 
+            "validation", 
+            "test"
+        ]
+        _LANGS = [
+            "pt", 
+            "en"
+        ]
+        _URLS = {
+            f"{split}_{lang}": f"{_URL}{split}_{lang}.json"
+            for split in _SPLITS
+            for lang in _LANGS
+        }
+
+        downloaded_files = dl_manager.download_and_extract(_URLS)
+
         return [
             datasets.SplitGenerator(
-                name=datasets.Split.datasets.Split(key),
+                name=datasets.Split(key),
                 gen_kwargs={"filepath": downloaded_files[key]},
             )
             for key in downloaded_files
