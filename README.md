@@ -21,7 +21,8 @@
 | pt  | train_pt, validation_pt, test_pt, external_pt |
 
 We additionally translated to Portuguese and used <a href="https://github.com/LasseRegin/medical-question-answer-data"> external data from here<a>.
-External data are from binary classification dataset "a QNLI medical-like", we adapted to value 5 or 0.
+
+External data derives from a binary classification dataset "a QNLI medical-like", we adapted to value 5 or 0.
 
 ### Usage
 
