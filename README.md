@@ -25,7 +25,7 @@ External data are from binary classification dataset "a QNLI medical-like", we a
 
 ### Usage
 
-#### Datasets :hugs
+#### Datasets :hugs:
 
 ```python
 from datasets import load_dataset
