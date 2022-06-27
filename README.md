@@ -3,7 +3,7 @@
     <h2 align="center">AskDocs: A medical QA dataset</h2>
     <img src="https://images.emojiterra.com/google/noto-emoji/v2.034/512px/1fa7a.png" alt="https://en.wikipedia.org/wiki/Stethoscope" width="250">
     <br />
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ju-resplande/askD">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/ju-resplande/askD?include_prereleases">
   <img alt="GitHub" src="https://img.shields.io/github/license/ju-resplande/askD">
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ju-resplande/askD?style=social">
   <p align="center">
