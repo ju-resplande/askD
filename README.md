@@ -39,7 +39,7 @@ data = load_dataset("ju-resplande/askD", "train_pt")
 ```bibtex
 @misc{Gomes20202,
   author = {GOMES, J. R. S.},
-  title = {PLUE: Portuguese Language Understanding Evaluation},
+  title = {AskDocs: A medical QA dataset},
   year = {2020},
   publisher = {GitHub},
   journal = {GitHub repository},
