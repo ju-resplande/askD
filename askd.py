@@ -77,7 +77,8 @@ class AskD(datasets.GeneratorBasedBuilder):
         _SPLITS = [
             "train", 
             "validation", 
-            "test"
+            "test",
+            "external"
         ]
         _LANGS = [
             "pt", 

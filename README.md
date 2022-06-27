@@ -8,11 +8,10 @@
   <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/ju-resplande/askD?style=social">
   <p align="center">
   <b>
-    <a href="https://huggingface.co/datasets/eli5">ELI5 dataset</a> adapted on <a href="https://www.reddit.com/r/AskDocs/">Medical Questions (AskDocs)</a> subreddit. 
+    <a href="https://huggingface.co/datasets/eli5">ELI5 dataset</a> adapted on <a href="https://www.reddit.com/r/AskDocs/">Medical Questions (AskDocs)</a> subreddit.
   </b>
   </p>
 </div>
-
 
 ## Getting Started
 
@@ -22,10 +21,11 @@
 | pt  | train_pt, validation_pt, test_pt, external_pt |
 
 We additionally translated to Portuguese and used <a href="https://github.com/LasseRegin/medical-question-answer-data"> external data from here<a>.
+External data are from binary classification dataset "a QNLI medical-like", we adapted to value 5 or 0.
 
-### Usage 
+### Usage
 
-#### Datasets :hugs:
+#### Datasets :hugs
 
 ```python
 from datasets import load_dataset
@@ -49,4 +49,5 @@ data = load_dataset("ju-resplande/askD", "train_pt")
 ```
 
 ## Acknowledgments
+
 [@viniciusplo](https://github.com/viniciusplo) and [@ruanchaves](https://github.com/ruanchaves) for giving the idea. :smiley:
