@@ -15,10 +15,10 @@
 
 ## Getting Started
 
- | Languages | Splits|
-| --- | --- |
-| en  | train_en, validation_en, test_en, external_en |
-| pt  | train_pt, validation_pt, test_pt, external_pt |
+|                             | Train  | Valid | Test | External |
+| -----                       | ------ | ----- | ---- | -------- |
+| en                          | 24256  |  5198 | 5198 | 166804   |
+| pt                          | 24256  |  5198 | 5198 | 166804   |
 
 We additionally translated to Portuguese and used <a href="https://github.com/LasseRegin/medical-question-answer-data"> external data from here<a>.
 
