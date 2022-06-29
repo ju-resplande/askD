@@ -20,9 +20,9 @@
 | en                          | 24256  |  5198 | 5198 | 166804   |
 | pt                          | 24256  |  5198 | 5198 | 166804   |
 
-We additionally translated to Portuguese and used <a href="https://github.com/LasseRegin/medical-question-answer-data"> external data from here<a>.
+The dataset questions and answers span a period from January 2013 to December 2019.
 
-External data derives from a binary classification dataset "a QNLI medical-like", we adapted to value 5 or 0.
+We additionally translated to Portuguese and used <a href="https://github.com/LasseRegin/medical-question-answer-data"> external data from here<a>, which is a binary classification dataset "a QNLI medical-like". We adapted to value 5 or 0.
 
 ### Usage
 
