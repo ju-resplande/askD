@@ -31,7 +31,7 @@ We additionally translated to Portuguese and used <a href="https://github.com/La
 ```python
 from datasets import load_dataset
 
-data = load_dataset("ju-resplande/askD", "train_pt")
+data = load_dataset("ju-resplande/askD", split="train_pt")
 # ['train_en', 'validation_en', 'test_en', 'external_en', 'train_pt', 'validation_pt', 'test_pt', 'external_pt']
 ```
 
